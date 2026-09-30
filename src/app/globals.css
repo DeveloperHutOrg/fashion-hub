@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-serif), "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-sans), "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  --color-ivory: #FAF8F5;
+  --color-ivory-dark: #F2EDE4;
+  --color-ivory-light: #FDFBF7;
+  --color-nearblack: #121212;
+  --color-mutedgray: #6B7280;
+  --color-border-ivory: #E5DFD5;
+  --color-burgundy: #72202B;
+  --color-burgundy-dark: #55161F;
+  --color-burgundy-light: #8F2B39;
+}
+
+:root {
+  --background: #FAF8F5;
+  --foreground: #121212;
+}
+
+body {
+  background-color: #FAF8F5;
+  color: #121212;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Typography helper classes */
+.font-editorial {
+  font-family: var(--font-serif);
+  letter-spacing: -0.02em;
+}
+
+/* Elegant selection */
+::selection {
+  background-color: #72202B;
+  color: #FAF8F5;
+}
+
+/* Hide scrollbars for smooth touch reels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Subtle image zoom transition */
+.image-zoom-container {
+  overflow: hidden;
+}
+.image-zoom-container img {
+  transition: transform 0.75s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.image-zoom-container:hover img {
+  transform: scale(1.05);
+}
